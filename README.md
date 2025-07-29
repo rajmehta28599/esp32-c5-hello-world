@@ -52,47 +52,61 @@ Please use the following feedback channels:
 
 We will get back to you as soon as possible.
 
-# ESP32-C5 Hello World Demo
+# ESP32-C5 Hello World Example
 
-A demonstration project for the ESP32-C5 microcontroller that showcases basic functionality and system information reporting.
+A simple demonstration project showing basic functionality of the ESP32-C5 microcontroller using FreeRTOS.
+
+## Project Structure
+```
+├── CMakeLists.txt            Project build configuration
+├── main
+│   ├── CMakeLists.txt       Component build configuration
+│   └── hello_world_main.c   Main source code
+└── README.md                This file
+```
 
 ## Features
 - System information display
-- WiFi/BLE/802.15.4 capability detection
-- Flash memory size reporting
-- Heap memory monitoring
-- Automatic system restart demonstration
+- Hardware capability detection
+- Memory monitoring
+- Auto-restart functionality
+- FreeRTOS task demonstration
 
-## Prerequisites
-- ESP-IDF v5.5
-- Visual Studio Code with ESP-IDF extension
+## Requirements
+
+### Hardware
 - ESP32-C5 development board
-- Windows 10/11 with Python 3.11+
+- USB cable
+- Computer running Windows 10/11
 
-## Quick Start
+### Software
+- ESP-IDF v5.5
+- Visual Studio Code
+- ESP-IDF VS Code Extension
+- Python 3.11 or newer
 
-1. Clone the repository:
-```bash
+## Getting Started
+
+1. Clone this repository:
+```powershell
 git clone https://github.com/rajmehta28599/esp32-c5-hello-world.git
 cd esp32-c5-hello-world
 ```
 
-2. Set the correct target:
-```bash
+2. Configure the project:
+```powershell
 idf.py set-target esp32c5
+idf.py menuconfig
 ```
 
-3. Build the project:
-```bash
+3. Build and flash:
+```powershell
 idf.py build
-```
-
-4. Flash and monitor (replace COM11 with your port):
-```bash
 idf.py -p COM11 flash monitor
 ```
+Note: Replace `COM11` with your board's actual COM port.
 
-## Output Example
+## Sample Output
 ```
 Hello world!
 This is esp32c5 chip with 1 CPU core(s), WiFi/BLE, 802.15.4 (Zigbee/Thread)
@@ -101,8 +115,15 @@ silicon revision v1.0
 Minimum free heap size: 123456 bytes
 ```
 
-## License
-This project is licensed under CC0-1.0
+## Troubleshooting
+- If flashing fails, verify your COM port number in Device Manager
+- For build errors, ensure ESP-IDF is properly installed and configured
+- For connectivity issues, check your USB cable connection
+- For upload issues, try lowering the baud rate in menuconfig
 
-## Contributing
-Feel free to open issues or submit pull requests for improvements.
+## Support
+- Open an issue on [GitHub](https://github.com/rajmehta28599/esp32-c5-hello-world/issues)
+- Visit [esp32.com](https://esp32.com/) forum for technical queries
+
+## License
+CC0-1.0
