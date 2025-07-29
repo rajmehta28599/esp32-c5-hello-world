@@ -127,3 +127,103 @@ Minimum free heap size: 123456 bytes
 
 ## License
 CC0-1.0
+
+# ESP32-C5 DevKitC-1 Hello World Example
+
+![ESP32-C5 DevKitC-1](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c5/esp32-c5-devkitc-1/_images/esp32-c5-devkitc-1.png)
+
+A demonstration project for the ESP32-C5 DevKitC-1 development board, showcasing basic functionality and system information reporting.
+
+## Board Overview
+The ESP32-C5 DevKitC-1 is a cost-effective development board powered by ESP32-C5 series SoCs. Key features include:
+- ESP32-C5 RISC-V single-core processor
+- 2.4 GHz Wi-Fi 6 (802.11ax)
+- Bluetooth 5 (LE)
+- IEEE 802.15.4 support
+- 400 KB SRAM
+- 8 MB flash memory
+
+## Pin Layout
+![ESP32-C5 DevKitC-1 Pin Layout](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c5/esp32-c5-devkitc-1/_images/esp32-c5-devkitc-1-pin-layout.png)
+
+## Project Features
+- System information display
+- Hardware capability detection
+- Memory monitoring
+- Auto-restart functionality
+- FreeRTOS task demonstration
+
+## Requirements
+
+### Hardware
+- ESP32-C5 DevKitC-1 board
+- USB Type-C cable
+- Computer running Windows 10/11
+
+### Software
+- ESP-IDF v5.5
+- Visual Studio Code
+- ESP-IDF VS Code Extension
+- Python 3.11 or newer
+
+## Getting Started
+
+1. **Connect the Board**
+   - Connect ESP32-C5 DevKitC-1 to your computer using USB Type-C cable
+   - Verify the power LED is on
+   - Check Device Manager for COM port number
+
+2. **Clone and Configure:**
+```powershell
+git clone https://github.com/rajmehta28599/esp32-c5-hello-world.git
+cd esp32-c5-hello-world
+idf.py set-target esp32c5
+idf.py menuconfig
+```
+
+3. **Build and Flash:**
+```powershell
+idf.py build
+idf.py -p COM11 flash monitor
+```
+Note: Replace `COM11` with your board's actual COM port.
+
+## Sample Output
+```
+Hello world!
+This is esp32c5 chip with 1 CPU core(s), WiFi/BLE, 802.15.4 (Zigbee/Thread)
+silicon revision v1.0
+8MB embedded flash
+Minimum free heap size: 123456 bytes
+```
+
+## Project Structure
+```
+├── CMakeLists.txt            Project build configuration
+├── main
+│   ├── CMakeLists.txt       Component build configuration
+│   └── hello_world_main.c   Main source code
+└── README.md                This file
+```
+
+## Hardware Resources
+- [ESP32-C5 DevKitC-1 Schematic (PDF)](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c5/esp32-c5-devkitc-1/_static/files/esp32-c5-devkitc-1_v1.0-schematic.pdf)
+- [ESP32-C5 Technical Reference Manual](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c5/hw-reference/index.html)
+
+## Troubleshooting
+- If flashing fails:
+  - Verify COM port number in Device Manager
+  - Hold BOOT button while connecting USB cable
+  - Try lowering flash frequency in menuconfig
+- For connection issues:
+  - Check USB Type-C cable connection
+  - Verify board power LED is on
+  - Try a different USB port
+
+## Support
+- [ESP32-C5 Forum](https://esp32.com/)
+- [GitHub Issues](https://github.com/rajmehta28599/esp32-c5-hello-world/issues)
+- [ESP32-C5 Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c5/index.html)
+
+## License
+CC0-1.0
