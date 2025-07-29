@@ -51,3 +51,58 @@ Please use the following feedback channels:
 * For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
 
 We will get back to you as soon as possible.
+
+# ESP32-C5 Hello World Demo
+
+A demonstration project for the ESP32-C5 microcontroller that showcases basic functionality and system information reporting.
+
+## Features
+- System information display
+- WiFi/BLE/802.15.4 capability detection
+- Flash memory size reporting
+- Heap memory monitoring
+- Automatic system restart demonstration
+
+## Prerequisites
+- ESP-IDF v5.5
+- Visual Studio Code with ESP-IDF extension
+- ESP32-C5 development board
+- Windows 10/11 with Python 3.11+
+
+## Quick Start
+
+1. Clone the repository:
+```bash
+git clone https://github.com/rajmehta28599/esp32-c5-hello-world.git
+cd esp32-c5-hello-world
+```
+
+2. Set the correct target:
+```bash
+idf.py set-target esp32c5
+```
+
+3. Build the project:
+```bash
+idf.py build
+```
+
+4. Flash and monitor (replace COM11 with your port):
+```bash
+idf.py -p COM11 flash monitor
+```
+
+## Output Example
+```
+Hello world!
+This is esp32c5 chip with 1 CPU core(s), WiFi/BLE, 802.15.4 (Zigbee/Thread)
+silicon revision v1.0
+2MB embedded flash
+Minimum free heap size: 123456 bytes
+```
+
+## License
+This project is licensed under CC0-1.0
+
+## Contributing
+Feel free to open issues or submit pull requests for improvements.

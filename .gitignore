@@ -1,4 +1,19 @@
+# Build directory
 build/
+
+# Project configuration
 sdkconfig
 sdkconfig.old
 dependencies.lock
+
+# IDE specific
+.vscode/
+*.code-workspace
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Debug files
+*.log
+core
