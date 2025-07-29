@@ -1,0 +1,23 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.espIdfPathWin": "C:\\Users\\rajme\\espC5\\v5.5\\esp-idf",
+  "idf.toolsPathWin": "d:\\ESP32_C5",
+  "idf.pythonInstallPath": "d:\\ESP32_C5\\tools\\idf-python\\3.11.2\\python.exe",
+  "idf.portWin": "COM11",
+  "idf.openOcdConfigs": [
+    "board/esp32c5-ftdi.cfg"
+  ],
+  "idf.flashType": "UART",
+  "idf.customExtraVars": {
+    "OPENOCD_SCRIPTS": "C:\\Users\\Raj-Mehta\\.espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",
+    "IDF_CCACHE_ENABLE": "1",
+    "ESP_ROM_ELF_DIR": "C:\\Users\\Raj-Mehta\\.espressif\\tools\\esp-rom-elfs\\20240305/",
+    "IDF_TARGET": "esp32c5"
+  },
+  "clangd.path": "d:\\ESP32_C5\\tools\\esp-clang\\esp-19.1.2_20250312\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=d:\\ESP32_C5\\tools\\riscv32-esp-elf\\esp-14.2.0_20241119\\riscv32-esp-elf\\bin\\riscv32-esp-elf-gcc.exe",
+    "--compile-commands-dir=d:\\ESP32_C5\\hello_world\\build"
+  ]
+}
